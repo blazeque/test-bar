@@ -84,6 +84,7 @@ function Recipe({ recipe }) {
           onClose={handleClose}
         >
           <div style={modalStyle} className={classes.paper}>
+            <p onClick={handleClose} className="close-button">X</p>
             <h2>{information.strDrink}</h2>
             <h3 className="mt-4">Instructions</h3>
             <p>
