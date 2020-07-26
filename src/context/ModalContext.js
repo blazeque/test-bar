@@ -23,14 +23,16 @@ function ModalProvider(props) {
   }, [id]);
 
   return (
+    <>
     <ModalContext.Provider
       value={{
         information,
         setId
       }}
-    >
+      >
       {props.children}
     </ModalContext.Provider>
+    </>
   );
 }
 

@@ -2,8 +2,9 @@ import React, { useContext, useState } from 'react';
 
 import Modal from '@material-ui/core/Modal';
 import { makeStyles } from '@material-ui/core/styles';
-
 import { ModalContext } from '../context/ModalContext';
+import axios from 'axios';
+ 
 
 function getModalStyle() {
   const top = 50;
@@ -51,6 +52,16 @@ function Recipe({ recipe }) {
     handleOpen();
   }
 
+  const orderDrink = () => {
+    const URL = 'http://localhost:3003/api/todos'
+    const description = recipe.strDrink
+    try {
+      axios.post(URL, { description })
+    } catch {
+      console.log('Erro')
+    }
+  }
+
   const showIngredients = information => {
     let ingredients = [];
     for (let i = 1; i < 16; i++) {
@@ -95,6 +106,7 @@ function Recipe({ recipe }) {
             <ul>
               {showIngredients(information)}
             </ul>
+            <button onClick={orderDrink}>Order</button>
           </div>
         </Modal>
       </div>
