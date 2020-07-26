@@ -31,20 +31,38 @@ h1 {
   background: #171738;
 }
 .btn-info:focus {
-  background: #171738;
+  background: #FFD9CE;
 }
 .btn-order {
   width: 100%;
 }
+.card-header {
+  background-color: #DB5461;
+  color: #fff;
+}
+.card-header > h3 {
+  font-size: 20px;
+  padding-top: 7px;
+}
 .close-button {
   cursor: pointer;
     position: absolute;
-    right: 20px;
+    right: 15px;
     font-size: 20px;
 }
 .makeStyles-paper-1 {
   border-radius: 10px;
   border: none !important;
+
+}
+
+.makeStyles-paper-1:focus {
+  border-radius: 10px;
+  border: none !important;
+}
+
+.img-fluid {
+  max-width: 50%;
 }
 
 ::-webkit-scrollbar {

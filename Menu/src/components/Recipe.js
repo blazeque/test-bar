@@ -97,17 +97,23 @@ function Recipe({ recipe }) {
           onClose={handleClose}
         >
           <div style={modalStyle} className={classes.paper}>
-            <p onClick={handleClose} className="close-button">X</p>
+            <div className="top-modal">
+            <p onClick={handleClose} className="btn btn-info close-button">X</p>
             <h2>{information.strDrink}</h2>
+            </div>
+         
             <h3 className="mt-4">Instructions</h3>
             <p>
               {information.strInstructions}
             </p>
             <img src={information.strDrinkThumb} alt="" className="img-fluid" />
-            <h3>Ingredients and Cantitys</h3>
+            <div className="cantitys">
+               <h3>Ingredients and Cantitys</h3>
             <ul>
               {showIngredients(information)}
             </ul>
+            </div>
+ 
             <button className="btn btn-info btn-order" onClick={orderDrink}>Order</button>
           </div>
         </Modal>
