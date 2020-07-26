@@ -8,6 +8,9 @@ body {
   background-color: #e5e5e5;
   min-height: 100%;
 }
+.bg-info {
+  background-color: #8E4A49 !important;
+}
 header {
   background-color: #ec3a49;
   color: white;
