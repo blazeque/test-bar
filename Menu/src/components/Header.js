@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = () => (
   <header className="bg-info">
-    <h1>Search Recipes of Drinks</h1>
+    <h1>WELCOME</h1>
   </header>
 );
 

@@ -57,6 +57,8 @@ function Recipe({ recipe }) {
     const description = recipe.strDrink
     try {
       axios.post(URL, { description })
+      alert('Drink ordered')
+      setOpen(false);
     } catch {
       console.log('Erro')
     }
@@ -106,7 +108,7 @@ function Recipe({ recipe }) {
             <ul>
               {showIngredients(information)}
             </ul>
-            <button onClick={orderDrink}>Order</button>
+            <button className="btn btn-info btn-order" onClick={orderDrink}>Order</button>
           </div>
         </Modal>
       </div>
